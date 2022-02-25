@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DNS</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css" />
+	</head>
+	<body class="bg-gray-100">
+		<header class="bg-white">
+			<div class="top-header py-2 bg-orange-500">
+				<ul
+					class="text-white flex items-center justify-between max-w-screen-lg m-auto"
+				>
+					<li class="flex items-center">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-4 w-4 mr-1"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+							/>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+							/>
+						</svg>
+						Тобольск
+					</li>
+					<li>Магазины</li>
+					<li>Покупателям</li>
+					<li>Юридическим лицам</li>
+					<li>Клуб DNS</li>
+					<li>8-800-77-07-999 (c 05:00 до 00:00)</li>
+				</ul>
+			</div>
+			<div class="header-center shadow-lg">
+				<ul class="flex py-5 max-w-screen-lg m-auto flex items-center">
+					<li class="mr-6">
+						<a href="./index.html">
+							<img
+								class="h-7 object-cover"
+								src="https://www.golaika.ru/static/laikaclientssite/res/headline/brands/dns.png"
+								alt=""
+							/>
+						</a>
+					</li>
+					<li>
+						<input
+							placeholder="Поиск по сайту"
+							class="w-80 h-8 mr-4 rounded-lg border opacity-50 border-zinc-200 bg-zinc-100"
+							type="text"
+						/>
+					</li>
+					<div class="flex items-center ml-auto">
+						<li class="ml-8">
+							<a href="#" class="flex items-center">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-5 w-5 text-zinc-400 mr-2"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+								>
+									<path
+										d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"
+									/>
+								</svg>
+								Сравнить
+							</a>
+						</li>
+						<li class="ml-8">
+							<a href="#" class="flex items-center">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-5 w-5 text-zinc-400 mr-2"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+									/>
+								</svg>
+
+								Избранное</a
+							>
+						</li>
+						<li class="ml-8 relative">
+							<a href="#" id="cart-btn" class="cart-btn flex items-center">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-5 w-5 text-zinc-400 mr-2"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+									/>
+								</svg>
+								Корзина</a
+							>
+							<div
+								id="cart-modal"
+								class="absolute top-6 right-0 drop-shadow-2xl bg-white p-6 rounded-xl w-[28rem] max-w-lg"
+							>
+								<div class="cart-modal-top flex mb-4">
+									<h4>Основные товары (2)</h4>
+									<button class="cart-modal-clear ml-auto">
+										Очистить список
+									</button>
+								</div>
+								<div class="cart-modal-center flex flex-wrap border-b-2"></div>
+								<div class="cart-modal-bottom">
+									<div class="cart-modal-final_price flex pt-6 text-xl pb-4">
+										<strong class="">Итого</strong>
+										<strong class="ml-auto">24 000 ₽</strong>
+									</div>
+									<a
+										class="border py-2 px-8 inline-block rounded-xl hover:bg-orange-400 hover:border-orange-400 hover:text-white mr-4"
+										href="#"
+										>Оформить заказ</a
+									>
+									<a
+										class="border py-2 px-8 inline-block rounded-xl bg-orange-400 text-white font-bold border-orange-400"
+										href="#"
+										>В корзину</a
+									>
+								</div>
+							</div>
+						</li>
+						<li class="ml-8">
+							<a href="#" class="flex items-center">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-5 w-5 text-zinc-400 mr-2"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+									/>
+								</svg>
+							</a>
+						</li>
+					</div>
+					<li class="ml-5">
+						<a class="border p-2 rounded-xl text-lg" href="#">Войти</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<main class="main bg-gray-100 pt-4 mb-10">
+			<div class="sidebar flex max-w-screen-lg m-auto">
+				<ul class="w-1/4 bg-white rounded-xl drop-shadow-sm py-2">
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st1/f573a7570163430349e1e2283c8c53ba/b7075dc069288bbda0900d114433734760ed1b3ed334790071d1b9151d2d9f95.svg"
+							alt=""
+						/>
+						<div>
+							<a class="" href="#">Бытовая техника </a>
+							<a href="#" class="block text-gray-400">для дома</a>
+						</div>
+					</li>
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st1/3a2d3e71ca2bce3239f5bb7aab2d53ac/0a0c6f0730489b14e8f42464af9d74e26e21f920fc95a2c3dd8bec2f46cbf134.svg"
+							alt=""
+						/>
+						<div class="">
+							<a href="#">Смартфоны и гаджеты </a>
+							<a href="#" class="block text-gray-400">планшеты</a>
+						</div>
+					</li>
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st4/f2e11aecd38c16f784a3cb888e92e666/9f224f9eef538a99fba58ca7740017c8e1922d4aecd25f82ebf16b3f83b41991.svg"
+							alt=""
+						/>
+						<div class="">
+							<a href="#">ТВ и мультимедия </a>
+							<a href="#" class="block text-gray-400">аудио видеоигры</a>
+						</div>
+					</li>
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st1/d6baafc696ebcbc6b37ca89e4ff52b11/5ab865819fcc03cb011483b5b3463c558d2f3d1cb6333d7c23fdd055a218746b.svg"
+							alt=""
+						/>
+						<div class="">
+							<a href="#">Компьютеры </a>
+							<a href="#" class="block text-gray-400">комплектующие</a>
+						</div>
+					</li>
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st4/065caad3cd9fd0edaac87969c48799eb/b1175170b47bb0113eb132cc663cd2d2c461b76d139a5db476cffa81465d5dfd.svg"
+							alt=""
+						/>
+						<div class="">
+							<a href="#">Офис и сеть </a>
+							<a href="#" class="block text-gray-400">кресла проекторы</a>
+						</div>
+					</li>
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st4/61e465fe2380f3f753a833d8056bb6f8/33d7adaa6d834d9a5deb8afe05b8ad1d2f4633593379149f605f081446fca3b6.svg"
+							alt=""
+						/>
+						<div class="">
+							<a href="#">Отдых и развлечения </a>
+							<a href="#" class="block text-gray-400">электросамокаты</a>
+						</div>
+					</li>
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st1/071e7d3e5943a1227d49a3c419e0bb57/74f9e17c13f4bb71a7f7713b8ca2ff17c9d8d53d922ca5e7edc39fe63bdb2754.svg"
+							alt=""
+						/>
+						<div class="">
+							<a href="#">Инструменты </a>
+							<a href="#" class="block text-gray-400">аккумуляторные</a>
+						</div>
+					</li>
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st4/83adfc06b8784d96e8c6721e0152c69c/7e23a4de3c3883fdd41aee0ecc51c6f204423c80de61d7d35569d79beb2985ad.svg"
+							alt=""
+						/>
+						<div class="">
+							<a href="#">Строительство и ремонт </a>
+							<a href="#" class="block text-gray-400">электрика</a>
+						</div>
+					</li>
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st1/d76629c6d57be2f29b929cc3a2fc2241/159a828643306f922530be67ef5941da56d235f49c50de3aa4a462e919388854.svg"
+							alt=""
+						/>
+						<div class="">
+							<a href="#">Дом, декор и кухня </a>
+							<a href="#" class="block text-gray-400">зоотовары посуда</a>
+						</div>
+					</li>
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st4/cb33aeff6453af447f4ed58a697bee5b/8584f4434c10052ada20b594f6b9b27ee8604286ee735a1cbdb0da2e895ef3a8.svg"
+							alt=""
+						/>
+						<div class="">
+							<a href="#">Автотовары </a>
+							<a href="#" class="block text-gray-400">звук автокресла</a>
+						</div>
+					</li>
+					<li class="flex p-2 pl-4 cursor-pointer hover:bg-gray-100">
+						<img
+							class="mr-4"
+							src="https://c.dns-shop.ru/original/st1/64b755af9085f57d5fbd80e79b1fefa7/f45bc4c2ce1b68693d0c99f06399312b0d055f552f6ea93d54047acf76be0eb2.svg"
+							alt=""
+						/>
+						<div class="">
+							<a href="#">Аксессуары и услуги </a>
+							<a href="#" class="block text-gray-400">наушники мыши</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<div class="max-w-screen-lg m-auto">
+			<h2 class="text-2xl font-semibold mb-4">Тепло в каждый дом</h2>
+
+			<div class="offer bg-white p-5">
+				<div class="offer-btn-top">
+					<button
+						class="font-bold bg-gray-100 p-1 px-3 rounded-xl border-b-indigo-500"
+					>
+						Тепловентиляторы
+					</button>
+					<button class="font-bold p-1 px-3 rounded-xl border-b-indigo-500">
+						Ковекторы
+					</button>
+					<button class="font-bold p-1 px-3 rounded-xl border-b-indigo-500">
+						Маслянные обогреватели
+					</button>
+					<button class="font-bold p-1 px-3 rounded-xl border-b-indigo-500">
+						Электрокамины
+					</button>
+				</div>
+				<div class="offer-center flex"></div>
+			</div>
+		</div>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+		<script src="./js/app.bundle.js"></script>
+		<script src="./js/firebase.bundle.js"></script>
+	</body>
+</html>

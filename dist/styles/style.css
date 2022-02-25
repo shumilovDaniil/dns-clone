@@ -1,0 +1,38 @@
+header {
+	font-size: 14px;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.btn-favorite.active {
+	background: #fc7414;
+	color: white;
+	border-color: #fc7414;
+}
+
+#btn-cart.active {
+	color: white;
+	background: #fc7414;
+	border-color: #fc7414;
+}
+
+#cart-modal {
+	display: none;
+}
+
+#cart-modal.active {
+	display: block;
+}
+
+.products-sidebar {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Chrome/Safari/Opera */
+	-khtml-user-select: none; /* Konqueror */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
